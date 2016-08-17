@@ -10,8 +10,9 @@ The speed value (integer) should be kept between `-1` and `1`.
 
 A positive number makes the element appear to scroll slowly downward, while a negative integer makes the element appear to scroll slowly upward.
 
-JS:
-```
+Javascript file:
+
+```javascript
 // Default usage
 $('.element').parallaxElement();
 
@@ -27,7 +28,7 @@ $('.element').parallaxElement({
 
 To assign different speeds to indivudual elements, use the `data-speed` attribute in html:
 
-```
+```html
 <div class="element" data-speed="0.1">
   <!-- do stuff -->
 </div>
