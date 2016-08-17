@@ -1,8 +1,10 @@
 // Plugins
-var gulp   = require('gulp');
-var jshint = require('gulp-jshint');
-var strip  = require('gulp-strip-comments')
+var gulp       = require('gulp');
+var jshint     = require('gulp-jshint');
+var strip      = require('gulp-strip-comments')
 var whitespace = require('gulp-whitespace');
+var emptyLines = require('gulp-remove-empty-lines');
+var clean      = require('gulp-clean');
 
 
 /** Utility Tasks **/
@@ -18,6 +20,16 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('jshint-reporter-jscs'));
 });
 
+/**
+ * Utility: Clean Dist Task
+ * Remove all dist files
+ *
+ */
+gulp.task('clean_dist', function(){
+  return gulp.src('./dist')
+    .pipe(clean());
+});
+
 
 /** Build Tasks **/
 
@@ -27,14 +39,12 @@ gulp.task('lint', function() {
  * Creates production ready files for distribution
  *
  */
-gulp.task('build_production', function() {
+gulp.task('build_production', ['clean_dist'], function() {
   return gulp.src('./src/parallax-element.js')
     .pipe( strip({
       safe: true
     }) )
-    .pipe( whitespace({
-      spacesToTabs: false,
-      removeTrailing: true
-    }) )
+    .pipe( whitespace() )
+    .pipe( emptyLines() )
     .pipe(gulp.dest('dist'));
 })

@@ -19,8 +19,10 @@
   "homepage": "https://github.com/iamhexcoder/parallax-element#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-jshint": "^2.0.1",
     "gulp-minify": "0.0.14",
+    "gulp-remove-empty-lines": "0.0.4",
     "gulp-strip-comments": "^2.4.3",
     "gulp-whitespace": "^0.1.0",
     "jshint": "^2.9.2",
