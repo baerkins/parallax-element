@@ -1,0 +1,29 @@
+{
+  "name": "parallax-element",
+  "version": "1.0.0",
+  "description": "jQuery plugin to add parallax effect to individual elements",
+  "main": "parallax-element.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamhexcoder/parallax-element.git"
+  },
+  "keywords": [
+    "parallax",
+    "jquery"
+  ],
+  "author": "Shaun M. Baer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamhexcoder/parallax-element/issues"
+  },
+  "homepage": "https://github.com/iamhexcoder/parallax-element#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify": "0.0.14",
+    "gulp-strip-comments": "^2.4.3",
+    "gulp-whitespace": "^0.1.0",
+    "jshint": "^2.9.2",
+    "jshint-reporter-jscs": "^0.1.0"
+  }
+}
