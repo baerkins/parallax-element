@@ -1,6 +1,6 @@
 {
   "name": "parallax-element",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "jQuery plugin to add parallax effect to individual elements",
   "main": "./dist/parallax-element.js",
   "repository": {
