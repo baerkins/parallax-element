@@ -176,6 +176,28 @@
 
   });
 
+  // Fire event on load
+  window.addEventListener("load", function(){
+
+    if ( opts.minWidth && opts.minWidth > winWidth ) {
+
+      $(this).removeAttr('style');
+
+      return false;
+
+    }
+
+    $.each(scrollEls, function(i, el) {
+
+      windowYOffset = window.pageYOffset;
+      winBottom     = (windowYOffset + winHeight);
+
+      runScrollElement(el);
+
+    });
+
+  });
+
   // Fire a single scroll event listener
   return document.addEventListener('scroll', function(){
 
