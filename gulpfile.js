@@ -39,7 +39,8 @@ gulp.task('clean_dist', function(){
  * Creates production ready files for distribution
  *
  */
-gulp.task('build_production', ['clean_dist'], function() {
+gulp.task('default', ['clean_dist'], function() {
+
   return gulp.src('./src/parallax-element.js')
     .pipe( strip({
       safe: true
@@ -47,4 +48,5 @@ gulp.task('build_production', ['clean_dist'], function() {
     .pipe( whitespace() )
     .pipe( emptyLines() )
     .pipe(gulp.dest('dist'));
-})
+});
+
